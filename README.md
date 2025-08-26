@@ -1,103 +1,119 @@
 # Twitter Sentiment Analysis Web App
 
-## Project Overview
+## Overview
 
-**NLP-Project-1-Twitter-Sentiment-Analysis-WebApp** is a natural language processing (NLP) project that analyzes the sentiment of tweets in real time. The web app classifies tweets as *positive*, *negative*, or *neutral*, providing insights into public opinion or feedback regarding specific topics or hashtags. The project uses machine learning techniques and popular NLP libraries to perform text preprocessing, vectorization, and sentiment classification.
+**Twitter Sentiment Analysis Web App** is an NLP-powered project designed to analyze tweets in real time. It classifies tweets into **positive**, **negative**, or **neutral** sentiments, offering valuable insights into public opinion on topics, events, or hashtags. Built with machine learning and popular NLP libraries, the app provides an interactive interface for real-time sentiment tracking and visualization.
+
+---
 
 ## Table of Contents
 
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Dataset](#dataset)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Modeling Approach](#modeling-approach)
-- [Web App Interface](#web-app-interface)
-- [Future Enhancements](#future-enhancements)
-- [License](#license)
+* [Overview](#overview)
+* [Features](#features)
+* [Tech Stack](#tech-stack)
+* [Dataset](#dataset)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Modeling Approach](#modeling-approach)
+* [Web App Interface](#web-app-interface)
+* [Future Enhancements](#future-enhancements)
+* [License](#license)
+
+---
 
 ## Features
 
-- Real-time sentiment analysis of tweets.
-- Classifies tweets into positive, negative, or neutral categories.
-- User can search tweets by a hashtag or keyword.
-- Interactive web interface built using Streamlit.
-- Visualizes results with charts showing the sentiment distribution.
+* Real-time sentiment classification of tweets.
+* Categorizes tweets into **positive**, **negative**, or **neutral**.
+* Search tweets by keyword or hashtag.
+* Interactive, user-friendly web interface built with **Streamlit**.
+* Visualizes sentiment distribution with charts.
 
-## Technologies Used
+---
 
-- **Python**: Core programming language used.
-- **Natural Language Processing (NLP)**: For text analysis and sentiment classification.
-- **Streamlit**: For building an interactive web app.
-- **Scikit-learn**: Machine learning library used for model building.
-- **Tweepy**: For fetching real-time tweets using the Twitter API.
-- **Numpy & Pandas**: For data manipulation and preprocessing.
-- **Matplotlib & Seaborn**: For data visualization.
+## Tech Stack
+
+* **Python** – Core language.
+* **NLP (Natural Language Processing)** – Text preprocessing and analysis.
+* **Streamlit** – Web app development.
+* **Scikit-learn** – Model training and evaluation.
+* **Tweepy** – Twitter API integration for real-time tweets.
+* **NumPy & Pandas** – Data handling and preprocessing.
+* **Matplotlib & Seaborn** – Data visualization.
+
+---
 
 ## Dataset
 
-The dataset for training the sentiment analysis model is sourced from:
-- Publicly available Twitter sentiment datasets.
-- The model is trained on a labeled dataset of tweets categorized as positive, negative, or neutral.
+* Trained on publicly available Twitter sentiment datasets.
+* Tweets labeled as *positive*, *negative*, or *neutral*.
+* Supports custom datasets or live tweet collection via the **Twitter API** and **Tweepy**.
 
-You can use your own dataset or fetch real-time tweets via the Twitter API using **Tweepy**.
+---
 
 ## Installation
 
-1. Clone this repository:
-    ```bash
-    git clone https://github.com/your-username/NLP-Project-1-Twitter-Sentiment-Analysis-WebApp.git
-    cd NLP-Project-1-Twitter-Sentiment-Analysis-WebApp
-    ```
+1. Clone the repository:
 
-2. Install the required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+   ```bash
+   git clone https://github.com/your-username/NLP-Twitter-Sentiment-Analysis-WebApp.git
+   cd NLP-Twitter-Sentiment-Analysis-WebApp
+   ```
 
-3. Set up your Twitter Developer Account and generate API keys for **Tweepy**.
+2. Install dependencies:
 
-4. Create a `.env` file in the project directory with your Twitter API credentials:
-    ```
-    TWITTER_API_KEY=your_api_key
-    TWITTER_API_SECRET_KEY=your_api_secret_key
-    TWITTER_ACCESS_TOKEN=your_access_token
-    TWITTER_ACCESS_TOKEN_SECRET=your_access_token_secret
-    ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-5. Run the app:
-    ```bash
-    streamlit run app.py
-    ```
+3. Set up your Twitter Developer Account and generate API keys.
+
+4. Create a `.env` file with your Twitter API credentials:
+
+   ```env
+   TWITTER_API_KEY=your_api_key
+   TWITTER_API_SECRET_KEY=your_api_secret_key
+   TWITTER_ACCESS_TOKEN=your_access_token
+   TWITTER_ACCESS_TOKEN_SECRET=your_access_token_secret
+   ```
+
+5. Launch the app:
+
+   ```bash
+   streamlit run app.py
+   ```
+
+---
 
 ## Usage
 
-1. Open the web app on your browser (default address is `http://localhost:8501`).
-2. Enter a keyword or hashtag to analyze the sentiment of recent tweets.
-3. The app will fetch the latest tweets related to the entered keyword, preprocess them, and classify them into positive, negative, or neutral sentiments.
-4. View the sentiment distribution graph for better understanding of public opinion.
+1. Open the app in your browser (`http://localhost:8501`).
+2. Enter a keyword or hashtag to analyze related tweets.
+3. The app fetches, preprocesses, and classifies tweets.
+4. Results are displayed as sentiment categories and a distribution chart.
+
+---
 
 ## Modeling Approach
 
-- **Text Preprocessing**: Tweets are cleaned by removing URLs, special characters, and stopwords. Tokenization is applied to split the text into individual words.
-- **Vectorization**: We use **TF-IDF Vectorizer** to convert text data into numerical format.
-- **Model**: A **Logistic Regression** model is used to classify the sentiment of the tweets. Other models such as **Naive Bayes** and **Support Vector Machine (SVM)** can also be tested for comparison.
+* **Preprocessing**: Remove URLs, special characters, and stopwords; tokenize text.
+* **Vectorization**: Convert text into numerical features using **TF-IDF**.
+* **Classification Model**: Logistic Regression is used as the baseline model.
+* **Alternative Models**: Naive Bayes and SVM tested for comparison.
+
+---
 
 ## Web App Interface
 
-The web app includes:
-- An input field for entering a keyword or hashtag.
-- A button to fetch and analyze tweets.
-- A bar chart showing the sentiment distribution across positive, negative, and neutral tweets.
+* Input field for entering hashtags/keywords.
+* Fetch & analyze button for real-time tweet processing.
+* Bar chart showing sentiment breakdown (positive, negative, neutral).
+
+---
 
 ## Future Enhancements
 
-- Implement advanced NLP models like BERT or LSTM for improved sentiment classification.
-- Add support for multilingual sentiment analysis.
-- Include historical sentiment tracking for a topic over time.
-- Implement user authentication for customized experience.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+* Integrate deep learning models (e.g., **BERT**, **LSTM**) for better accuracy.
+* Enable **multilingual sentiment analysis**.
+* Add **historical sentiment tracking** for trends over time.
+* Implement **user authentication** for personalized dashboards.
